@@ -1212,11 +1212,11 @@ const App = () => {
                         <div className="relative w-8 h-8 rounded overflow-hidden bg-white">
                             <img src={daritto} alt="Logo" className="w-full h-full object-cover" />
                         </div>
-                        <span className="text-lg font-bold text-white tracking-wide">DARITTO<span className="text-blue-500">.</span></span>
+                        <span className="text-lg font-bold text-white tracking-wide">DARIITO<span className="text-blue-500">.</span></span>
                     </div>
 
                     <div className="text-sm font-medium flex flex-wrap justify-center gap-6">
-                        <span>© 2024 Dariito Engineering.</span>
+                        <span>© 2026 Dariito Engineering.</span>
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
