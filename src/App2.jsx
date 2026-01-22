@@ -25,7 +25,9 @@ import {
     Lightbulb,
     HelpCircle,
     ChevronDown,
-    Play
+    Play,
+    Hammer,
+    MapPin
 } from 'lucide-react';
 
 import carbon from "./assets/daritto_carbon.png"
@@ -315,6 +317,44 @@ const PRODUCT_DATA = [
                 { label: "Flexural Strength", value: "40 - 75 MPa" },
                 { label: "Thermal Conductivity", value: "120 - 160 W/m·K" },
                 { label: "Supply Form", value: "Standard/Custom Dimensions" }
+            ]
+        }
+    },
+    {
+        id: "04",
+        name: "Tungsten Copper Rods",
+        tagline: "High-Performance Composite",
+        desc: "A robust composite combining the high melting point of tungsten with the high conductivity of copper.",
+        icon: <Hammer className="w-6 h-6" />,
+        image: "https://media.istockphoto.com/id/598919998/photo/copper-pipes.webp?a=1&b=1&s=612x612&w=0&k=20&c=77SyyRNaMhEaycECIh5Z_HhVNBjYl0sr-zuRJ3-xB14=",
+        specs: ["High Density", "Arc Resistant", "High Conductivity"],
+        details: {
+            intro: "Tungsten copper rods are composite materials made by combining tungsten (W) and copper (Cu)—typically through powder metallurgy (sintering and copper infiltration). They are not true alloys (the metals don’t fully dissolve into each other) but a two-phase composite, which gives them a unique balance of properties.",
+            types: [
+                { title: "W70–Cu30", desc: "Higher conductivity, easier machining." },
+                { title: "W75–Cu25", desc: "Standard grade for general applications." },
+                { title: "W80–Cu20", desc: "Balanced strength and conductivity." },
+                { title: "W90–Cu10", desc: "Maximum heat and wear resistance." }
+            ],
+            features: [
+                "High melting resistance (Tungsten core)",
+                "High thermal & electrical conductivity (Copper matrix)",
+                "Low thermal expansion",
+                "Good arc erosion resistance",
+                "High density & strength"
+            ],
+            applications: [
+                "Electrical contacts & electrodes (circuit breakers)",
+                "Heat sinks & thermal spreaders (electronics)",
+                "EDM electrodes",
+                "Aerospace & defense components",
+                "High-voltage devices"
+            ],
+            technicalSpecs: [
+                { label: "Density", value: "11.8 – 16.7 g/cm³" },
+                { label: "Electrical Conductivity", value: "30–55% IACS" },
+                { label: "Thermal Conductivity", value: "180–260 W/m·K" },
+                { label: "Forms", value: "Round rods, square rods, custom profiles" }
             ]
         }
     }
@@ -640,12 +680,12 @@ const App = () => {
                                 <Hexagon className="w-6 h-6 text-blue-700" />
                             </div>
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-slate-900 font-sans">DARITTO<span className="text-blue-600">.</span></span>
+                        <span className="text-xl font-bold tracking-tight text-slate-900 font-sans">DARIITO<span className="text-blue-600">.</span></span>
                     </div>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">
-                        {['Products', 'Technology', 'About', 'Contact'].map((item) => (
+                        {['Products', 'About', 'Contact'].map((item) => (
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
@@ -674,7 +714,7 @@ const App = () => {
                 {/* --- MOBILE DROPDOWN MENU --- */}
                 {isMenuOpen && (
                     <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl flex flex-col items-center py-8 gap-6 animate-in slide-in-from-top-5 duration-200 md:hidden">
-                        {['Products', 'Technology', 'About', 'Contact'].map((item) => (
+                        {['Products', 'About', 'Contact'].map((item) => (
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
@@ -714,8 +754,8 @@ const App = () => {
                 <div className="container mx-auto px-6 md:px-12 relative z-10 pt-28 pb-20 lg:pt-28 lg:pb-32">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
 
-                        <div className="w-full lg:w-1/2 space-y-8 reveal relative z-10">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md transition-shadow cursor-default">
+                        <div className="w-full lg:w-1/2 space-y-8 reveal relative z-10 text-center lg:text-left">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md transition-shadow cursor-default mx-auto lg:mx-0">
                                 <span className="relative flex h-3 w-3">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
@@ -728,13 +768,13 @@ const App = () => {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Global Industry.</span>
                             </h1>
 
-                            <div className="flex flex-col gap-4 border-l-4 border-blue-600 pl-6">
+                            <div className="flex flex-col gap-4 lg:border-l-4 border-blue-600 lg:pl-6 items-center lg:items-start">
                                 <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                                    Daritto engineers the foundation of automotive excellence. We supply high-grade <strong className="text-slate-900">Carbon</strong>, <strong className="text-slate-900">Graphite</strong>, and <strong className="text-slate-900">EDM Electrodes</strong> with micron-level precision.
+                                    Dariito engineers the foundation of automotive excellence. We supply high-grade <strong className="text-slate-900">Carbon</strong>, <strong className="text-slate-900">Graphite</strong>,<strong className="text-slate-900"> Tungsten copper rods </strong>, and <strong className="text-slate-900">EDM Electrodes</strong> with micron-level precision.
                                 </p>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
                                 <a
                                     href="#products"
                                     className="px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-xl shadow-slate-900/20 flex items-center justify-center gap-2 group"
@@ -750,7 +790,7 @@ const App = () => {
                                 </a>
                             </div>
 
-                            <div className="pt-8 flex flex-wrap items-center gap-8 text-slate-500">
+                            <div className="pt-8 flex flex-wrap items-center gap-8 text-slate-500 justify-center lg:justify-start">
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-blue-600" />
                                     <span className="text-sm font-medium">Global Logistics</span>
@@ -986,7 +1026,7 @@ const App = () => {
                     </div>
 
                     <div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 perspective-1000"
                         style={{ perspective: '2000px' }}
                     >
                         {PRODUCT_DATA.map((product, index) => (
@@ -1083,7 +1123,7 @@ const App = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs text-slate-400 uppercase font-bold mb-1">Call Us</p>
-                                            <p className="font-medium text-lg">+1 (555) 012-3456</p>
+                                            <p className="font-medium text-lg">+91 9050345764</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4 group cursor-pointer">
@@ -1092,7 +1132,16 @@ const App = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs text-slate-400 uppercase font-bold mb-1">Email Us</p>
-                                            <p className="font-medium text-lg">procurement@daritto.com</p>
+                                            <p className="font-medium text-lg">sales@dariito.com</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-4 group cursor-pointer">
+                                        <div className="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                            <MapPin className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-slate-400 uppercase font-bold mb-1">Visit Us</p>
+                                            <p className="font-medium text-sm leading-snug">Dariito India, Plot No. 2, Hisar Road,<br />Pratham Bhawan, Shastri Nagar,<br />Opp. LPS Factory, Rohtak, Haryana.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1108,6 +1157,7 @@ const App = () => {
                                 </div>
                             </div>
                         </div>
+
 
                         {/* Form Side */}
                         <div className="w-full lg:w-7/12 bg-white p-8 md:p-12">
@@ -1166,7 +1216,7 @@ const App = () => {
                     </div>
 
                     <div className="text-sm font-medium flex flex-wrap justify-center gap-6">
-                        <span>© 2024 Daritto Engineering.</span>
+                        <span>© 2024 Dariito Engineering.</span>
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
